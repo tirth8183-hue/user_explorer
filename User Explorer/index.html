@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>GitHub User Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="container nav">
+
+            <h1>GitHub Explorer</h1>
+
+            <button id="themeBtn" class="theme-btn">
+                🌙
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="container">
+
+        <!-- Search Section -->
+        <section class="hero">
+
+            <h2>Explore GitHub Users</h2>
+
+            <p>
+                Search GitHub users using the GitHub REST API.
+            </p>
+
+            <form id="searchForm" class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter username..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Status -->
+        <div id="status"></div>
+
+
+        <!-- Loading -->
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+
+        <!-- Results -->
+        <section>
+
+            <div
+                id="results"
+                class="user-grid"
+            ></div>
+
+        </section>
+
+
+        <!-- Pagination -->
+        <div
+            id="pagination"
+            class="pagination hidden"
+        >
+
+            <button id="prevBtn">
+                ← Previous
+            </button>
+
+            <span id="pageNumber">
+                Page 1
+            </span>
+
+            <button id="nextBtn">
+                Next →
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- User Modal -->
+    <div
+        id="modal"
+        class="modal hidden"
+    >
+
+        <div class="modal-content">
+
+            <button
+                id="closeModal"
+                class="close-btn"
+            >
+                ×
+            </button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
